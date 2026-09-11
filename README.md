@@ -1,17 +1,20 @@
-# Law Beyond
+﻿# Law Beyond
 
-A productivity and social platform for law students — track streaks, manage study plans, monitor budgets, and connect with peers. Built with React, TypeScript, Tailwind CSS, Supabase, and M-Pesa payments.
+<img src="./assets/header.svg" width="100%" alt="header" />
+
+
+A productivity and social platform for law students â€” track streaks, manage study plans, monitor budgets, and connect with peers. Built with React, TypeScript, Tailwind CSS, Supabase, and M-Pesa payments.
 
 ## Features
 
-- **Home Dashboard** — daily overview, quick actions, notifications
-- **Streaks & Social Feed** — create posts, comment, like, build daily streaks
-- **Study Planner** — manage tasks, assignments, and deadlines
-- **Budget Tracker** — income/expense tracking, transaction history, spending charts
-- **Push Notifications** — real-time web push alerts
-- **Premium Subscriptions** — feature gating with M-Pesa STK Push payments
-- **Auth** — email/password login and signup via Supabase
-- **Responsive** — mobile bottom nav + desktop sidebar layouts
+- **Home Dashboard** â€” daily overview, quick actions, notifications
+- **Streaks & Social Feed** â€” create posts, comment, like, build daily streaks
+- **Study Planner** â€” manage tasks, assignments, and deadlines
+- **Budget Tracker** â€” income/expense tracking, transaction history, spending charts
+- **Push Notifications** â€” real-time web push alerts
+- **Premium Subscriptions** â€” feature gating with M-Pesa STK Push payments
+- **Auth** â€” email/password login and signup via Supabase
+- **Responsive** â€” mobile bottom nav + desktop sidebar layouts
 
 ## Tech Stack
 
@@ -48,7 +51,7 @@ VITE_SENTRY_DSN=your-sentry-dsn        # optional
 VITE_CLOUDINARY_CLOUD_NAME=your-cloud  # optional
 ```
 
-Get Supabase credentials from your [Supabase dashboard](https://supabase.com/dashboard) → Project Settings → API.
+Get Supabase credentials from your [Supabase dashboard](https://supabase.com/dashboard) â†’ Project Settings â†’ API.
 
 ### Run
 
@@ -66,52 +69,52 @@ npm run build
 
 ```
 src/
-├── components/
-│   ├── layout/              # App shell components
-│   │   ├── BottomNav.tsx
-│   │   ├── DesktopSidebar.tsx
-│   │   └── NotificationsDropdown.tsx
-│   └── ui/                  # Reusable UI components
-├── features/
-│   ├── auth/                # Auth.tsx — login & signup
-│   ├── dashboard/           # HomeDashboard
-│   ├── streaks/             # Streaks, StreakPost, PostDetail, CreatePostModal
-│   ├── planner/             # Planner — tasks & assignments
-│   ├── budget/              # BudgetTracker
-│   ├── profile/             # Profile
-│   ├── notifications/       # NotificationsPage
-│   └── subscription/        # SubscriptionGate, PaymentPage
-├── contexts/
-│   └── AuthContext.tsx       # Supabase auth provider
-├── hooks/                   # Custom React hooks
-├── lib/
-│   ├── api.ts               # API helpers
-│   ├── supabase.ts          # Supabase client init
-│   ├── cloudinary.ts        # Cloudinary upload config
-│   ├── notify.ts            # Push notification helpers
-│   ├── sentry.ts            # Sentry init
-│   └── circuit-breaker.ts   # Circuit breaker for API calls
-├── App.tsx                  # Router + auth guards
-├── main.tsx                 # Entry point
-└── index.css                # Tailwind + design tokens
+â”œâ”€â”€ components/
+â”‚   â”œâ”€â”€ layout/              # App shell components
+â”‚   â”‚   â”œâ”€â”€ BottomNav.tsx
+â”‚   â”‚   â”œâ”€â”€ DesktopSidebar.tsx
+â”‚   â”‚   â””â”€â”€ NotificationsDropdown.tsx
+â”‚   â””â”€â”€ ui/                  # Reusable UI components
+â”œâ”€â”€ features/
+â”‚   â”œâ”€â”€ auth/                # Auth.tsx â€” login & signup
+â”‚   â”œâ”€â”€ dashboard/           # HomeDashboard
+â”‚   â”œâ”€â”€ streaks/             # Streaks, StreakPost, PostDetail, CreatePostModal
+â”‚   â”œâ”€â”€ planner/             # Planner â€” tasks & assignments
+â”‚   â”œâ”€â”€ budget/              # BudgetTracker
+â”‚   â”œâ”€â”€ profile/             # Profile
+â”‚   â”œâ”€â”€ notifications/       # NotificationsPage
+â”‚   â””â”€â”€ subscription/        # SubscriptionGate, PaymentPage
+â”œâ”€â”€ contexts/
+â”‚   â””â”€â”€ AuthContext.tsx       # Supabase auth provider
+â”œâ”€â”€ hooks/                   # Custom React hooks
+â”œâ”€â”€ lib/
+â”‚   â”œâ”€â”€ api.ts               # API helpers
+â”‚   â”œâ”€â”€ supabase.ts          # Supabase client init
+â”‚   â”œâ”€â”€ cloudinary.ts        # Cloudinary upload config
+â”‚   â”œâ”€â”€ notify.ts            # Push notification helpers
+â”‚   â”œâ”€â”€ sentry.ts            # Sentry init
+â”‚   â””â”€â”€ circuit-breaker.ts   # Circuit breaker for API calls
+â”œâ”€â”€ App.tsx                  # Router + auth guards
+â”œâ”€â”€ main.tsx                 # Entry point
+â””â”€â”€ index.css                # Tailwind + design tokens
 
 supabase/
-└── functions/               # Supabase Edge Functions (Deno)
-    ├── initiate-payment/    # M-Pesa STK Push via Lipana
-    ├── mpesa-webhook/       # M-Pesa payment callback
-    └── send-push/           # Web push notification sender
+â””â”€â”€ functions/               # Supabase Edge Functions (Deno)
+    â”œâ”€â”€ initiate-payment/    # M-Pesa STK Push via Lipana
+    â”œâ”€â”€ mpesa-webhook/       # M-Pesa payment callback
+    â””â”€â”€ send-push/           # Web push notification sender
 ```
 
 ## Database
 
 Supabase manages auth, database, and RLS policies. Tables include:
 
-- `profiles` — user profiles (auto-created on signup)
-- `posts` / `comments` / `likes` — social feed and streaks
-- `tasks` / `assignments` — planner and coursework
-- `transactions` — budget tracking
-- `subscriptions` — premium tier management
-- `notifications` — push notification records
+- `profiles` â€” user profiles (auto-created on signup)
+- `posts` / `comments` / `likes` â€” social feed and streaks
+- `tasks` / `assignments` â€” planner and coursework
+- `transactions` â€” budget tracking
+- `subscriptions` â€” premium tier management
+- `notifications` â€” push notification records
 
 Run migrations via the Supabase CLI or SQL Editor.
 
