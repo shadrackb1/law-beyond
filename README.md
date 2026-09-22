@@ -1,28 +1,27 @@
 # Law Beyond
 
-<img src="./assets/header.svg" width="100%" alt="Law Beyond" />
+Study system for Kenyan law students. Streaks, planner, budgets, and a peer feed — with premium tiers paid on M-Pesa.
 
-Study system for law students. Streaks, planner, budgets, peer feed, and premium features paid with M-Pesa.
+## What it does
 
-## What you get
-
-- Daily overview, quick actions, notifications
-- Streaks and a social feed
-- Study planner for tasks, assignments, deadlines
-- Budget tracker with charts
-- Push notifications
+- Daily overview with quick actions and push notifications
+- Study streaks and a peer feed to keep momentum
+- Planner for tasks, assignments, and court-date deadlines
+- Budget tracker with charts for school and living costs
 - M-Pesa STK Push for premium tiers
-- Email auth via Supabase
+- Email auth and data via Supabase
 
 ## Stack
 
-React 19, TypeScript, Vite, Tailwind CSS, Supabase, Lipana (M-Pesa), Sentry, Cloudinary.
+React 19, TypeScript, Vite, Tailwind CSS, Supabase, Lipana (M-Pesa), Sentry, Cloudinary, PWA (Workbox).
 
 ## Run locally
 
-    npm install
-    cp .env.example .env
-    npm run dev
+```bash
+npm install
+cp .env.example .env
+npm run dev
+```
 
 ## License
 
